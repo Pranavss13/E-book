@@ -1,0 +1,250 @@
+body{
+    font-family: "Poppin", sans-serif;
+    background-color: #6c4d8a;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book{
+    width: 350px;
+    height: 450px;
+    position: relative;
+    transition-duration: 1s;
+    perspective: 1500;
+}
+
+input{
+    display: none;
+}
+
+.cover, .back-cover{
+    background-color:#4e975bc4;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 0 5px rgb(41,41,41);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.cover{
+    position: absolute;
+    z-index: 9;
+    transform-origin: center left;
+    transition: transform 1s;
+    /* background-image: url(page1.png);
+    background-position: center;
+    background-size: cover; */
+    /* backface-visibility: hidden; */
+    
+    
+}
+
+.cover label{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+.back-cover{
+    position: relative;
+    z-index: -1;
+
+}
+
+.page{
+    /* z-index: 1; */
+    position: absolute;
+    background-color: rgb(246, 255, 198);
+    width: 100%; /*330px*/
+    height: 100%; /*430px*/
+    border-radius: 0 15px 15px 0;
+    /* margin-top: 10px; */
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition-duration: 1.5s;
+    
+}
+
+
+.front-page{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    padding: 1rem;
+    /* display: flex; */
+}
+
+/* .front-page img{
+    height: 50px;
+    width: 50px;
+    
+} */
+.front-page img{
+    height: 436.5px; /* 104% */
+    /* width: 103%; */
+    border-radius: 0 15px 15px 0;
+    /* margin-top: 2%;
+    margin-left: 2.5%;*/
+    /* margin-top: -4px;
+    margin-left: -4px; */
+
+    margin-top: -9px;
+    /* height: 436.5px; */
+    margin-left: -7px;
+    width: 104%;
+} 
+
+
+.back-page{
+    transform: rotateY(180deg);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    z-index: 99;
+}
+
+.back-page img{
+    height: 97%;
+    width: 95%;
+    border-radius: 15px 0 0 15px;
+    margin-top: 2%;
+    margin-left: 2.5%;
+    
+}
+
+.next, .prev{
+    position: absolute;
+    bottom: 1em;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.next{
+    right: 1em;
+    top: 0px;
+    left: -0px;
+    right: 0px;
+}
+
+.prev{
+    left: 1em;
+    top:0px;
+    left:0px;
+}
+
+#page1{
+    z-index: 8;
+}
+
+#page2{
+    z-index: 7;
+}
+
+#page3{
+    z-index: 6;
+}
+
+#page4{
+    z-index: 5;
+}
+
+#page5{
+    z-index: 4;
+}
+
+#page6{
+    z-index: 3;
+}
+
+#page7{
+    z-index: 2;
+}
+
+#page8{
+    z-index: 1;
+}
+
+#checkbox-cover:checked ~ .book{
+    transform: translateX(200px);
+}
+
+#checkbox-cover:checked ~ .book .cover{
+    transition: transform 1.5s, z-index 0.5s 0.5s;
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+
+#checkbox-cover:checked ~ .book .page{
+    box-shadow: 0 0 3px rgb(99,98,98);
+}
+
+#checkbox-page1:checked ~ .book #page1{
+    /* transform: rotateY(-180deg);
+    z-index: 2; */
+    transform: rotateY(-180deg);
+    z-index: 7;
+}
+
+#checkbox-page2:checked ~ .book #page2{
+    /* transform: rotateY(-180deg);
+    z-index: 3; */
+    transform: rotateY(-180deg);
+    z-index: 8;
+}
+
+#checkbox-page3:checked ~ .book #page3{
+    /* transform: rotateY(-180deg);
+    z-index: 4; */
+    transform: rotateY(-180deg);
+    z-index: 9;
+}
+
+#checkbox-page4:checked ~ .book #page4{
+    /* transform: rotateY(-180deg);
+    z-index: 5; */
+    transform: rotateY(-180deg);
+    z-index: 12;
+}
+
+#checkbox-page5:checked ~ .book #page5{
+    /* transform: rotateY(-180deg);
+    z-index: 6; */
+    transform: rotateY(-180deg);
+    z-index: 17;
+}
+
+#checkbox-page6:checked ~ .book #page6{
+    /* transform: rotateY(-180deg);
+    z-index: 7; */
+    transform: rotateY(-180deg);
+    z-index: 28;
+}
+
+#checkbox-page7:checked ~ .book #page7{
+    /* transform: rotateY(-180deg);
+    z-index: 8; */
+    transform: rotateY(-180deg);
+    z-index: 47;
+}
+
+#preloader{
+    background: #000 url(load.gif) no-repeat center center;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+
+}
+
