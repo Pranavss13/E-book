@@ -1,3 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@media(max-width:0px){
+    .cover{
+        transform-origin: none;
+    }
+}
+
 body{
     font-family: "Poppin", sans-serif;
     background-color: #6c4d8a;
@@ -35,7 +46,7 @@ input{
 
 .cover{
     position: absolute;
-    z-index: 9;
+    z-index: 21;
     transform-origin: center left;
     transition: transform 1s;
     /* background-image: url(page1.png);
@@ -146,36 +157,89 @@ input{
 }
 
 #page1{
-    z-index: 8;
+    z-index: 20;
 }
 
 #page2{
-    z-index: 7;
+    z-index: 19;
 }
 
 #page3{
-    z-index: 6;
+    z-index: 18;
 }
 
 #page4{
-    z-index: 5;
+    z-index: 17;
 }
 
 #page5{
-    z-index: 4;
+    z-index: 16;
 }
 
 #page6{
-    z-index: 3;
+    z-index: 15;
 }
 
 #page7{
-    z-index: 2;
+    z-index: 14;
 }
 
 #page8{
+    z-index: 13;
+}
+
+#page9{
+    z-index: 12;
+}
+
+#page10{
+    z-index: 11;
+}
+
+#page11{
+    z-index: 10;
+}
+
+#page12{
+    z-index: 9;
+}
+
+#page13{
+    z-index: 8;
+}
+
+#page14{
+    z-index: 7;
+}
+
+#page15{
+    z-index: 6;
+}
+
+#page16{
+    z-index: 5;
+}
+
+#page17{
+    z-index: 4;
+}
+
+#page18{
+    z-index: 3;
+}
+
+#page19{
+    z-index: 2;
+}
+
+#page20{
     z-index: 1;
 }
+
+
+
+
+
 
 #checkbox-cover:checked ~ .book{
     transform: translateX(200px);
@@ -195,42 +259,42 @@ input{
     /* transform: rotateY(-180deg);
     z-index: 2; */
     transform: rotateY(-180deg);
-    z-index: 7;
+    z-index: 19;
 }
 
 #checkbox-page2:checked ~ .book #page2{
     /* transform: rotateY(-180deg);
     z-index: 3; */
     transform: rotateY(-180deg);
-    z-index: 8;
+    z-index: 20;
 }
 
 #checkbox-page3:checked ~ .book #page3{
     /* transform: rotateY(-180deg);
     z-index: 4; */
     transform: rotateY(-180deg);
-    z-index: 9;
+    z-index: 21;
 }
 
 #checkbox-page4:checked ~ .book #page4{
     /* transform: rotateY(-180deg);
     z-index: 5; */
     transform: rotateY(-180deg);
-    z-index: 12;
+    z-index: 23;
 }
 
 #checkbox-page5:checked ~ .book #page5{
     /* transform: rotateY(-180deg);
     z-index: 6; */
     transform: rotateY(-180deg);
-    z-index: 17;
+    z-index: 27;
 }
 
 #checkbox-page6:checked ~ .book #page6{
     /* transform: rotateY(-180deg);
     z-index: 7; */
     transform: rotateY(-180deg);
-    z-index: 28;
+    z-index: 35;
 }
 
 #checkbox-page7:checked ~ .book #page7{
@@ -240,13 +304,100 @@ input{
     z-index: 47;
 }
 
+#checkbox-page8:checked ~ .book #page8{
+    /* transform: rotateY(-180deg);
+    z-index: 8; */
+    transform: rotateY(-180deg);
+    z-index: 70;
+}
+
+#checkbox-page9:checked ~ .book #page9{
+    /* transform: rotateY(-180deg);
+    z-index: 8; */
+    transform: rotateY(-180deg);
+    z-index: 105;
+}
+
+#checkbox-page10:checked ~ .book #page10{
+    /* transform: rotateY(-180deg);
+    z-index: 8; */
+    transform: rotateY(-180deg);
+    z-index: 157;
+}
+
+#checkbox-page11:checked ~ .book #page11{
+    /* transform: rotateY(-180deg);
+    z-index: 8; */
+    transform: rotateY(-180deg);
+    z-index: 236;
+}
+
+#checkbox-page12:checked ~ .book #page12{
+    /* transform: rotateY(-180deg);
+    z-index: 8; */
+    transform: rotateY(-180deg);
+    z-index: 356;
+}
+
+#checkbox-page7:checked ~ .book #page7{
+    /* transform: rotateY(-180deg);
+    z-index: 8; */
+    transform: rotateY(-180deg);
+    z-index: 500;
+}
+
+#checkbox-page7:checked ~ .book #page7{
+    /* transform: rotateY(-180deg);
+    z-index: 8; */
+    transform: rotateY(-180deg);
+    z-index: 47;
+}
+
+#checkbox-page7:checked ~ .book #page7{
+    /* transform: rotateY(-180deg);
+    z-index: 8; */
+    transform: rotateY(-180deg);
+    z-index: 47;
+}
+
+#checkbox-page7:checked ~ .book #page7{
+    /* transform: rotateY(-180deg);
+    z-index: 8; */
+    transform: rotateY(-180deg);
+    z-index: 47;
+}
+
+#checkbox-page7:checked ~ .book #page7{
+    /* transform: rotateY(-180deg);
+    z-index: 8; */
+    transform: rotateY(-180deg);
+    z-index: 47;
+}
+
+#checkbox-page7:checked ~ .book #page7{
+    /* transform: rotateY(-180deg);
+    z-index: 8; */
+    transform: rotateY(-180deg);
+    z-index: 47;
+}
+
+#checkbox-page7:checked ~ .book #page7{
+    /* transform: rotateY(-180deg);
+    z-index: 8; */
+    transform: rotateY(-180deg);
+    z-index: 47;
+}
+
+
+
 #preloader{
     background: #000 url(load.gif) no-repeat center center;
     background-size: 30%;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     position: fixed;
     z-index: 100;
+    margin: 0px;
 
 }
 
